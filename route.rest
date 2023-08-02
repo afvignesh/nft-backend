@@ -1,0 +1,12 @@
+GET http://localhost:4000/transaction/12345678
+
+###
+
+POST http://localhost:4000/transaction
+Content-Type: application/json
+
+{
+    "hashId": "12345678910",
+    "userId": "12345678",
+    "transactionDetails": {}
+}
