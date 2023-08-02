@@ -14,7 +14,7 @@ const db_url = process.env.DATABASE_URL;
 mongoose.connect(db_url)
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
-db.once('open', (error) => console.log("Connected to DB"))
+db.once('open', () => console.log("Connected to DB"))
 //To let server accept json
 app.use(express.json())
 

@@ -5,7 +5,7 @@ const router = express.Router()
 
 
 // Route to save the transacion data to DB
-router.get('/:userId', async (req, res, next) => {
+router.get('/:userId', async (req, res) => {
     let transaction
     try {
         transaction = await Transaction.find({userId: req.params.userId})
