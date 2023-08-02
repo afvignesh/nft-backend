@@ -21,6 +21,10 @@ app.use(express.json())
 const transactionRouter = require('./routes/transactions')
 app.use('/transaction', transactionRouter)
 
+app.use('/', (req, res) => {
+  res.json({"message": "Hello!!"})
+})
+
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header('Access-Control-Allow-Methods', 'DELETE, PUT, GET, POST');
